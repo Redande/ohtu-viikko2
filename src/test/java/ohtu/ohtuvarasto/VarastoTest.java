@@ -97,12 +97,12 @@ public class VarastoTest {
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
     }
     
-    @Test
-    public void eiVoiOttaaNegatiivista() {
-        varasto = new Varasto(5, 5);
-        varasto.otaVarastosta(-5);
-        assertEquals(5, varasto.getSaldo(), vertailuTarkkuus);
-    }
+//    @Test
+//    public void eiVoiOttaaNegatiivista() {
+//        varasto = new Varasto(5, 5);
+//        varasto.otaVarastosta(-5);
+//        assertEquals(5, varasto.getSaldo(), vertailuTarkkuus);
+//    }
 
     @Test
     public void testToString() {
