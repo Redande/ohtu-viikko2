@@ -56,7 +56,27 @@ public class Player implements Comparable<Player> {
                 + String.format("%2d",assists) + " = " + getPoints();
     }
 
+    @Override
     public int compareTo(Player t) {
         return t.getPoints()-this.getPoints();
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Player)) {
+            return false;
+        }
+        Player p = (Player) o;
+        if (!p.getName().equals(this.getName())) {
+            return false;
+        } else if (!p.getTeam().equals(this.getTeam())) {
+            return false;
+        } else if (p.getGoals() != this.getGoals()) {
+            return false;
+        } else if (p.getAssists() != this.getAssists()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
